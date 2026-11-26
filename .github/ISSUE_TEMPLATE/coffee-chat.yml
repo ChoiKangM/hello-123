@@ -1,0 +1,54 @@
+name: 커피챗 신청
+description: 코딩, 러닝, 해달프로그래밍 이야기를 나누기 위한 커피챗을 신청합니다.
+title: "[커피챗] "
+labels: ["coffee-chat"]
+assignees: ["ChoiKangM"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        커피챗 신청에 관심을 가져 주셔서 감사합니다.
+
+        **이 신청서와 이슈 댓글은 누구에게나 공개됩니다.** 이메일, 전화번호 등
+        개인 연락처나 비공개 링크를 적지 말아 주세요. 일정은 이슈 댓글로 조율합니다.
+        답변은 GitHub 알림 설정에 따라 확인할 수 있습니다.
+  - type: input
+    id: name
+    attributes:
+      label: 이름 또는 닉네임
+      description: 공개해도 괜찮은 이름이나 닉네임을 적어 주세요.
+    validations:
+      required: true
+  - type: input
+    id: affiliation
+    attributes:
+      label: 소속 또는 직무
+      description: 선택 항목입니다.
+  - type: dropdown
+    id: format
+    attributes:
+      label: 진행 방식
+      options:
+        - 온라인
+        - 오프라인
+    validations:
+      required: true
+  - type: input
+    id: availability
+    attributes:
+      label: 희망 일정
+      description: 선택 항목입니다. 가능한 시간대를 자유롭게 적어 주세요.
+  - type: textarea
+    id: topic
+    attributes:
+      label: 이야기 나누고 싶은 주제
+      description: 코딩, 러닝 등 편하게 이야기하고 싶은 주제를 적어 주세요.
+    validations:
+      required: true
+  - type: checkboxes
+    id: public-notice
+    attributes:
+      label: 공개 안내 확인
+      options:
+        - label: 신청 내용이 공개되며 개인 연락처나 비공개 링크를 적지 않았습니다.
+          required: true
